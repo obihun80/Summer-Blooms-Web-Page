@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artistic Director • Summer Blooms</title>
+
+  <!-- Typography loaded from stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="concerts-page">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Summer Blooms home">
+      <img class="site-logo" src="images/logo.png" alt="Summer Blooms logo">
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="director.html">Artistic Director</a>
+      <a href="concerts.html" aria-current="page">Concerts</a>
+      <a href="auditions.html">Auditions</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div id="mobile-drawer" class="mobile-drawer" data-open="false" aria-hidden="true">
+    <div class="drawer-inner">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="director.html">Artistic Director</a>
+      <a href="concerts.html" aria-current="page">Concerts</a>
+      <a href="auditions.html">Auditions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="director">
+    <h1 class="page-title">Concerts</h1>
+    <div class="director-text">
+      <p>We announce concerts when our program is fully prepared and meets our artistic standards. If you would like to hear about upcoming performances, please add your email below.</p>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/mpqjnkpk" method="POST">
+      <div class="form-row">
+        <label for="concert-email">Email</label>
+        <input id="concert-email" name="email" type="email" required maxlength="254" autocomplete="email">
+      </div>
+
+      <div class="form-actions">
+        <button type="submit">Add to email list</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    © <span id="y"></span> Summer Blooms, Moorhead, MN
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+
+
+</body>
+</html>

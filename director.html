@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artistic Director • Summer Blooms</title>
+
+  <!-- Typography loaded from stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Summer Blooms home">
+      <img class="site-logo" src="images/logo.png" alt="Summer Blooms logo">
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="director.html" aria-current="page">Artistic Director</a>
+      <a href="concerts.html">Concerts</a>
+      <a href="auditions.html">Auditions</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div id="mobile-drawer" class="mobile-drawer" data-open="false" aria-hidden="true">
+    <div class="drawer-inner">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="director.html" aria-current="page">Artistic Director</a>
+      <a href="concerts.html">Concerts</a>
+      <a href="auditions.html">Auditions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Two-column layout (photo left, text right) -->
+  <section class="director">
+    <div class="director-grid">
+      <figure class="director-photo">
+        <img src="images/oksanal.jpg" alt="Dr. Oksana Bihun at a bus stop holding a coffee cup">
+      </figure>
+
+      <div class="director-text">
+        <h1 class="page-title">Artistic Director</h1>
+
+        <p>
+          Dr. Oksana Bihun is the founder and the Artistic Director of Summer Blooms. She is a composer with musical training in Ukraine. Her art is rooted in authentic life that allows her to channel music with honesty and vulnerability. Dr. Bihun’s compositions spring out of necessity and are grounded in deeply held values. Her music explores difficult themes of wartime sacrifice and suffering, as well as marginalized spiritual experiences. In her art, Dr. Bihun bears witness to humanity by participating in the unfolding work, listening as the art form discloses itself.
+        </p>
+
+        <p>
+          Oksana Bihun’s approach to directing Summer Blooms is guided by the same innate disposition. She supports artistic expression beyond technical excellence, inviting musicians to enrich the music with their emotional and spiritual experiences. Dr. Bihun surrenders to the structure and methods that emerge through the creative process of directing, inspiring ensemble members to co-create with agency and freedom.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    © <span id="y"></span> Summer Blooms, Moorhead, MN
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

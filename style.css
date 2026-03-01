@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+:root{
+  --bg: #fefefe;
+  --gutter: 2rem;
+  --ink: #2f3342;
+  --muted: #6a7085;
+  --line: rgba(74, 110, 92, 0.14);
+  --brand: #4f3b78;
+  --brand-soft: #e8e0f3;
+  --max: clamp(1100px, 90vw, 1400px);
+  
+  /* Font families */
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --hand: "Lora", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  
+  /* Letter spacing */
+  --ls-tight: 0.003em;
+  --ls-normal: 0.005em;
+  --ls-wide: 0.06em;
+  --ls-wider: 0.04em;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+.container{
+  width: min(var(--max), calc(100% - 2 * var(--gutter)));
+  margin: 0 auto;
+}
+
+a{ color: inherit; text-decoration: none; }
+
+/* ================= HEADER ================= */
+
+.site-header{
+  background: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding-top: 0.4rem;
+}
+
+.site-header .container{
+  width: 100%;
+  max-width: none;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65) inset,
+    0 4px 10px rgba(47, 51, 66, 0.08);
+}
+
+.header-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  padding-right: 2rem;
+  gap: 1rem;
+  line-height: 1;
+}
+
+/* Logo */
+.site-logo{
+  width: 260px;
+  height: auto;
+  display: block;
+}
+
+/* ================= NAVIGATION ================= */
+
+.nav{
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-top: 56px;
+}
+
+.nav a{
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  font-weight: 500;
+  letter-spacing: var(--ls-wide);
+  color: var(--ink);
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid transparent;
+}
+
+.nav a[aria-current="page"]{
+  color: var(--brand);
+  border-bottom-color: var(--brand);
+}
+
+.nav a[href="director.html"]{
+  display: inline-block;
+  text-align: center;
+}
+
+/* ================= HAMBURGER BUTTON ================= */
+
+.menu-btn{
+  display: none;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 10px;
+  width: 44px;
+  height: 40px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.hamburger{
+  position: relative;
+  width: 18px;
+  height: 2px;
+  background: var(--ink);
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.hamburger::before,
+.hamburger::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+}
+
+.hamburger::before{ top: -6px; }
+.hamburger::after{ top: 6px; }
+
+/* ================= MOBILE DRAWER ================= */
+
+.mobile-drawer{
+  display: none;
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.mobile-drawer[data-open="true"]{
+  display: block;
+}
+
+.drawer-inner{
+  padding: 1rem 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.drawer-inner a{
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  letter-spacing: var(--ls-wide);
+  color: var(--ink);
+}
+
+.drawer-inner a[aria-current="page"]{
+  color: var(--brand);
+}
+
+/* ===== Homepage Poem ===== */
+
+.home-poem{
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 1.3vw, 1.3rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: var(--ls-tight);
+  line-height: 1.4;
+  color: var(--ink);
+  max-width: 720px;
+  margin: 0.8rem auto 0.8rem auto;
+  text-align: center;
+}
+
+.home-poem p{
+  margin: 0.05em 0;
+}
+
+.home-poem .stanza{
+  margin-top: 0.6rem;
+}
+
+.poem-credit{
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  max-width: 260px;
+  margin: 0.6rem auto 0;
+  text-align: right;
+}
+
+/* ================= MAIN ================= */
+
+main{
+  padding: 2.6rem 0 3.4rem;
+  font-family: var(--serif);
+}
+
+.page-title{
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 2.2vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: var(--ls-normal);
+  color: var(--brand);
+  margin: 0;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6),
+    0 2px 0 rgba(79, 59, 120, 0.12),
+    0 3px 6px rgba(79, 59, 120, 0.22);
+}
+
+.page-subtitle{
+  margin-top: 0;
+  color: var(--muted);
+  max-width: 72ch;
+  font-size: 1.05rem;
+}
+
+.home-intro{
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: var(--ls-normal);
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 720px;
+  margin: 2.5rem auto 0 auto;
+  text-align: center;
+  padding-bottom: 2.2rem;
+}
+/* ================= FOOTER ================= */
+
+.site-footer{
+  border-top: 1px solid var(--line);
+  padding: 1.2rem 0;
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: var(--ls-wider);
+  color: var(--muted);
+}
+
+/* ===== Director layout ===== */
+
+.director{
+  padding: 2.2rem 0 3.0rem;
+}
+
+/* ===== Contact form ===== */
+
+.contact-form{
+  max-width: 760px;
+  margin-top: 1.2rem;
+}
+
+.contact-page main{
+  padding-top: 1.1rem;
+  padding-bottom: 1.7rem;
+}
+
+.contact-section{
+  padding: 0.5rem 0 0.9rem;
+}
+
+.contact-intro{
+  font-size: clamp(1.2rem, 1.6vw, 1.35rem);
+}
+
+.auditions-page .director-text,
+.concerts-page .director-text,
+.about-page .director-text{
+  max-width: 68ch;
+  margin-right: 0;
+}
+
+.auditions-page .director-text p,
+.concerts-page .director-text p{
+  text-align: left;
+  text-justify: auto;
+  hyphens: none;
+}
+
+.about-page .director-text p{
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.about-page .about-lead-3d{
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65),
+    0 1.5px 0 rgba(79, 59, 120, 0.18),
+    0 3px 5px rgba(79, 59, 120, 0.2);
+}
+
+.about-page .director-text::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about-quote{
+  width: 280px;
+  margin: 1.1rem auto 0.35rem;
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  box-shadow:
+    0 0 0 1px rgba(79, 59, 120, 0.08) inset,
+    0 0 14px rgba(79, 59, 120, 0.16),
+    0 0 28px rgba(79, 59, 120, 0.08);
+}
+
+.about-quote-wrap{
+  width: 320px;
+}
+
+.about-quote-right{
+  float: right;
+  margin-left: 1.1rem;
+}
+
+.about-quote-left{
+  float: left;
+  margin-right: 1.1rem;
+}
+
+.about-quote p{
+  margin: 0;
+  font-family: var(--hand);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.2vw, 1.18rem);
+  line-height: 1.45;
+  text-align: center;
+  color: var(--brand);
+}
+
+.about-quote cite{
+  display: block;
+  margin-top: 0.55rem;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--brand);
+}
+
+.about-quote-photo-wrap{
+  --about-photo-crop-top: 26%;
+  position: relative;
+  width: calc(100% + 2rem);
+  height: 165px;
+  margin: 0.7rem -1rem 0.6rem;
+  overflow: hidden;
+}
+
+.about-quote-photo{
+  position: absolute;
+  top: calc(-1 * var(--about-photo-crop-top));
+  left: 0;
+  width: 100%;
+  height: calc(100% + var(--about-photo-crop-top));
+  object-fit: cover;
+}
+
+.about-quote-leaves{
+  display: block;
+  margin: 0 auto 0.55rem;
+  width: min(180px, 45%);
+  height: auto;
+}
+
+.auditions-page .director-text a{
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.auditions-page .director-text a:hover,
+.auditions-page .director-text a:focus-visible{
+  opacity: 0.85;
+}
+
+.auditions-page .auditions-lead{
+  font-size: clamp(1.45rem, 1.8vw, 1.7rem);
+  font-weight: 500;
+  color: var(--brand);
+  line-height: 1.35;
+  margin-bottom: 0.55rem;
+}
+
+.about-members{
+  margin-top: 1.25rem;
+  max-width: 68ch;
+}
+
+.about-members .page-subtitle{
+  margin-bottom: 0.8rem;
+}
+
+.member-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 1.1rem;
+}
+
+.member-card{
+  margin: 0;
+}
+
+.member-photo-slot{
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f7f4fb 0%, #eef4f0 100%);
+}
+
+.member-name{
+  margin-top: 0.55rem;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.member-role{
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  color: var(--muted);
+}
+
+.form-row{
+  margin-bottom: 1rem;
+}
+
+.form-row label{
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: var(--ls-normal);
+  color: var(--ink);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button{
+  font-family: var(--serif);
+  letter-spacing: var(--ls-normal);
+}
+
+.contact-form input,
+.contact-form textarea{
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  padding: 0.7rem 0.85rem;
+  font-size: 1rem;
+}
+
+.contact-form textarea{
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline: none;
+  border-color: var(--brand);
+}
+
+.char-row{
+  margin-top: 0.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.char-counter{
+  white-space: nowrap;
+}
+
+.char-counter.limit-reached{
+  color: var(--brand);
+}
+
+.form-actions button{
+  border: 1px solid rgba(79, 59, 120, 0.35);
+  border-radius: 10px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  padding: 0.55rem 0.95rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-actions button:hover,
+.form-actions button:focus-visible{
+  border-color: var(--brand);
+  background: var(--brand);
+  color: #fff;
+}
+
+/* Layout: image left, text wraps to the right; image height fixed to 700px,
+   preserves original aspect ratio (width:auto). If viewport is too narrow,
+   text stacks under the image.
+*/
+.director-grid{
+  display: block; /* use float-based flow so text wraps around image */
+  position: relative;
+  overflow: visible;
+  gap: 0; /* grid gap not used for float layout */
+}
+
+.director-photo{
+  float: left;
+  margin: 0 var(--gutter) 1rem 0;
+  width: auto;
+  max-width: 45%;
+  min-width: 180px;
+
+  /* ensure rounded corners are always visible */
+  border-radius: 10px;
+  overflow: hidden;
+
+  /* make rounding and repainting smoother across browsers */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform, border-radius;
+  /* robust clipping for browsers that occasionally fail to clip with border-radius */
+  clip-path: inset(0 round 10px);
+}
+
+/* keep the container radius and also apply it to the img so corners
+   remain rounded at all sizes (avoids moments where img edges render sharp) */
+.director-photo img{
+  display: block;
+  height: 500px;       /* changed from 700px to 500px */
+  width: auto;         /* preserve original aspect ratio */
+  max-width: none;     /* allow width to scale from intrinsic aspect ratio */
+  border-radius: 10px; /* keep corners rounded */
+  object-fit: contain;
+  -webkit-mask-image: none;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65) inset,
+    0 4px 10px rgba(47, 51, 66, 0.08);
+
+  /* promote to its own layer to avoid intermediate unrounded frames */
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Keep the original font settings for the director text (unchanged) */
+.director-text{
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: var(--ls-normal);
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+  margin-right: var(--gutter);
+  min-width: 100px;
+}
+
+.director-text p{
+  margin: 0 0 1rem 0;
+  color: var(--ink);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* If viewport is too narrow, stack image above text and scale image down */
+@media (max-width: 900px){
+  .director-grid{
+    display: block;
+  }
+  .director-photo{
+    float: none;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .director-photo img{
+    /* keep height fixed at 500px to preserve requested behavior */
+    height: 500px;
+    width: auto;
+    max-height: none;
+  }
+  .director-text{
+    margin-top: 0.5rem;
+    margin-right: 0;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px){
+  .member-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .site-logo{
+    width: 220px;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  .menu-btn{
+    display: inline-flex;
+  }
+
+  .director-grid{
+    display: block;
+  }
+  .director-photo{
+    float: none;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .director-photo img{
+    height: 500px;
+    width: auto;
+    max-height: none;
+  }
+  .director-text{
+    margin-top: 0.5rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1200px){
+  .director-photo{
+    max-width: 50%;
+  }
+}

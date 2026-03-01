@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Summer Blooms</title>
+
+  <!-- Typography loaded from stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Summer Blooms home">
+      <img class="site-logo" src="images/logo.png" alt="Summer Blooms logo">
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="director.html">Artistic Director</a>
+      <a href="concerts.html">Concerts</a>
+      <a href="auditions.html">Auditions</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+  </div>
+  <div id="mobile-drawer" class="mobile-drawer" data-open="false" aria-hidden="true">
+    <div class="drawer-inner">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="director.html">Artistic Director</a>
+      <a href="concerts.html">Concerts</a>
+      <a href="auditions.html">Auditions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="home-poem">
+    <p>Graceful muses gather round...,</p>
+    <p>Clothed in air and breath of skies...</p>
+
+    <p class="stanza">
+      Gladly joined them choirs of women,<br>
+      Winged in hope, in flowing arcs...
+    </p>
+  </div>
+
+  <div class="poem-credit">
+    — Oksana Bihun
+  </div>
+
+  <p class="home-intro">
+    Summer Blooms is a vocal ensemble of women winged in hope. 
+    We strive for excellence by becoming vessels for the music, 
+    bringing it to life with emotional honesty and depth. 
+    We perform sacred and secular repertoire that resonates with us most.
+  </p>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    © <span id="y"></span> Summer Blooms, Moorhead, MN
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
