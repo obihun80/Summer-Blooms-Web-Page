@@ -295,11 +295,74 @@ main{
   margin-right: 0;
 }
 
+.concerts-page{
+  --concert-content-width: 680px;
+}
+
+.concerts-page .director-text,
+.concerts-page .contact-form,
+.concerts-page .concerts-divider{
+  width: 100%;
+  max-width: var(--concert-content-width);
+}
+
 .auditions-page .director-text p,
-.concerts-page .director-text p{
+.concerts-page .director-text p:not(.concert-hero){
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.auditions-page .director-text p{
   text-align: left;
   text-justify: auto;
   hyphens: none;
+}
+
+.concerts-page .concert-hero{
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+
+.concerts-page .concerts-divider{
+  border: 0;
+  height: 1px;
+  margin: 0.5rem 0 1.35rem;
+  background: rgba(79, 59, 120, 0.38);
+}
+
+.concerts-page .concert-title{
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.2vw, 2.85rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: var(--ls-tight);
+  color: var(--brand);
+}
+
+.concerts-page .concert-subtitle{
+  display: inline-block;
+  margin-top: 0.1rem;
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-weight: 500;
+  letter-spacing: var(--ls-normal);
+  color: #5b4883;
+}
+
+.concerts-page .director-text p.concert-dates{
+  text-align: center;
+  text-justify: auto;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+.concerts-page .director-text p.concert-dates strong{
+  font-weight: 700;
+  color: var(--brand);
+  font-size: 1.05em;
 }
 
 .about-page .director-text p{
