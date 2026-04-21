@@ -352,17 +352,53 @@ main{
   color: #5b4883;
 }
 
-.concerts-page .director-text p.concert-dates{
+.concert-schedule{
+  display: grid;
+  gap: 1.15rem;
+  margin: 1.45rem 0 1.35rem;
+}
+
+.concert-event{
+  display: grid;
+  gap: 0.08rem;
+}
+
+.concerts-page .director-text .concert-event p{
+  margin: 0;
   text-align: center;
   text-justify: auto;
   -webkit-hyphens: none;
   hyphens: none;
 }
 
-.concerts-page .director-text p.concert-dates strong{
-  font-weight: 700;
+.concert-event-time{
+  font-family: var(--hand);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6a587f;
+}
+
+.concert-event-time span{
   color: var(--brand);
-  font-size: 1.05em;
+}
+
+.concert-event-venue{
+  font-family: var(--serif);
+  font-size: clamp(1.38rem, 1.8vw, 1.62rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: var(--ls-tight);
+  color: #3f5f52;
+}
+
+.concert-event-address{
+  font-family: var(--hand);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--muted);
 }
 
 .about-page .director-text p{
@@ -635,6 +671,7 @@ main{
   max-width: none;     /* allow width to scale from intrinsic aspect ratio */
   border-radius: 10px; /* keep corners rounded */
   object-fit: contain;
+  mask-image: none;
   -webkit-mask-image: none;
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.65) inset,
