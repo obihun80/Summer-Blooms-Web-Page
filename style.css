@@ -501,10 +501,7 @@ main{
 
 .director .director-text a{
   color: inherit;
-  text-decoration: underline;
-  text-decoration-color: currentColor;
-  text-underline-offset: 0.14em;
-  text-decoration-thickness: 1px;
+  text-decoration: none;
 }
 
 .director .director-text a:hover,
