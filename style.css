@@ -39,7 +39,7 @@ body{
   margin: 0 auto;
 }
 
-a{ color: inherit; text-decoration: none; }
+a{ color: inherit; text-decoration: underline; }
 
 /* ================= HEADER ================= */
 
@@ -501,7 +501,7 @@ main{
 
 .director .director-text a{
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .director .director-text a:hover,
