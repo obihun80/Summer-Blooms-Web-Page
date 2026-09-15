@@ -261,7 +261,7 @@ main{
 }
 
 .obihun-page .obihun-footer{
-  clear: left;
+  clear: both;
   width: 100%;
   margin-top: 0.35rem;
   padding-top: 1.2rem;
@@ -700,7 +700,6 @@ main{
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
 
 /* Keep the original font settings for the director text (unchanged) */
 .director-text{

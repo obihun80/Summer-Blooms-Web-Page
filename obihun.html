@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Oksana Bihun • Summer Blooms</title>
 
+  <!-- Typography loaded from stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap">
@@ -22,7 +23,7 @@
     <nav class="nav" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="director.html">Artistic Director</a>
+      <a href="director.html" aria-current="page">Artistic Director</a>
       <a href="concerts.html">Concerts</a>
       <a href="auditions.html">Auditions</a>
       <a href="contact.html">Contact</a>
@@ -37,7 +38,7 @@
     <div class="drawer-inner">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="director.html">Artistic Director</a>
+      <a href="director.html" aria-current="page">Artistic Director</a>
       <a href="concerts.html">Concerts</a>
       <a href="auditions.html">Auditions</a>
       <a href="contact.html">Contact</a>
@@ -46,28 +47,28 @@
 </header>
 
 <main class="container">
+  <!-- Two-column layout (photo left, text right) -->
   <section class="director">
-    <h1 class="page-title">Oksana Bihun</h1>
-
     <div class="director-grid">
       <figure class="director-photo">
-        <img src="Bihun_Headshot.JPG" alt="Dr. Oksana Bihun">
+        <img src="Bihun_Headshot.JPG" alt="Oksana Bihun">
       </figure>
 
       <div class="director-text">
-        <p><a href="https://archives.ukrfolk.ca/bihun-oksana-2" target="_blank" rel="noopener noreferrer">Bio</a></p>
-        <p><a href="https://www.youtube.com/@OksanaBihunComposer/" target="_blank" rel="noopener noreferrer">YouTube Channel</a></p>
-        <p><a href="Bihun_Liturgy.pdf">Divine Liturgy of St. John Chrysostom</a></p>
+        <h1 class="page-title">Oksana Bihun</h1>
+        <a href="https://archives.ukrfolk.ca/bihun-oksana-2" target="_blank" rel="noopener noreferrer">Bio</a><br>
+        <a href="https://www.youtube.com/@OksanaBihunComposer" target="_blank" rel="noopener noreferrer">Youtube Channel</a><br>
+        <a href="Bihun_Liturgy.pdf">Divine Liturgy</a>
       </div>
-
-      <footer class="site-footer obihun-footer">
-        <div class="container">
-          © <span id="y"></span> Summer Blooms, Moorhead, MN
-        </div>
-      </footer>
     </div>
   </section>
 </main>
+
+<footer class="site-footer obihun-footer">
+  <div class="container">
+    © <span id="y"></span> Summer Blooms, Moorhead, MN
+  </div>
+</footer>
 
 <script src="./script.js"></script>
 
