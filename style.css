@@ -914,3 +914,16 @@ main{
       max-width: 50%;
     }
 }
+
+@media (max-width: 900px){
+  .obihun-page .director-photo{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .obihun-page .director-photo img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
