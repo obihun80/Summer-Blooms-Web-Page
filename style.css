@@ -260,6 +260,13 @@ main{
   color: var(--muted);
 }
 
+.obihun-page .obihun-footer{
+  clear: left;
+  width: 100%;
+  margin-top: 0.35rem;
+  padding-top: 1.2rem;
+}
+
 /* ===== Director layout ===== */
 
 .director{
@@ -658,8 +665,8 @@ main{
   float: left;
   margin: 0 var(--gutter) 1rem 0;
   width: auto;
-  max-width: 45%;
-  min-width: 180px;
+  max-width: 38%;
+  min-width: 160px;
 
   /* ensure rounded corners are always visible */
   border-radius: 10px;
@@ -677,7 +684,7 @@ main{
    remain rounded at all sizes (avoids moments where img edges render sharp) */
 .director-photo img{
   display: block;
-  height: 500px;       /* changed from 700px to 500px */
+  height: 360px;       /* reduced for a more compact layout */
   width: auto;         /* preserve original aspect ratio */
   max-width: none;     /* allow width to scale from intrinsic aspect ratio */
   border-radius: 10px; /* keep corners rounded */
@@ -693,6 +700,7 @@ main{
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
 
 /* Keep the original font settings for the director text (unchanged) */
 .director-text{
@@ -727,9 +735,9 @@ main{
     max-width: 100%;
   }
   .director-photo img{
-    /* keep height fixed at 500px to preserve requested behavior */
-    height: 500px;
+    height: clamp(220px, 45vw, 320px);
     width: auto;
+    max-width: 100%;
     max-height: none;
   }
   .director-text{
