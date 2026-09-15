@@ -427,13 +427,14 @@ main{
 }
 
 .home-video{
-  max-width: 760px;
+  width: min(100%, 760px);
   margin: 2rem auto 1.6rem;
   text-align: center;
 }
 
 .home-video h2{
   margin: 0;
+  text-align: center;
   font-family: var(--serif);
   font-size: clamp(1.45rem, 2.2vw, 2rem);
   font-weight: 500;
@@ -443,6 +444,7 @@ main{
 
 .home-video-copyright{
   margin: 0.35rem 0 0.9rem;
+  text-align: center;
   font-family: var(--serif);
   font-size: clamp(1.3rem, 1.5vw, 1.5rem);
   font-weight: 300;
@@ -452,6 +454,7 @@ main{
 .home-video-frame{
   position: relative;
   width: 100%;
+  margin-inline: auto;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 10px;
