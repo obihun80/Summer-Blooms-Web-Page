@@ -506,7 +506,7 @@ main{
 }
 
 .auditions-page .director-text a{
-  color: var(--brand);
+  color: #3f5f52;
   text-decoration: underline;
   text-underline-offset: 0.14em;
 }
